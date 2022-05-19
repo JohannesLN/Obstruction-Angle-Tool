@@ -13,7 +13,7 @@ How to run tool:
   7. Run the tool. 
 
 Image of the workflow of the tool can be found in the "Workflow-ObstructionAngle.jpg" file. 
-![OA_workflow](https://user-images.githubusercontent.com/11694862/169313162-de3648af-b636-4f92-9a2a-01e2832b6f2f.png)
+![OA_workflow](https://user-images.githubusercontent.com/11694862/169313575-237b28c9-0779-4064-b1e8-dde778a3c6fd.png)
 
 
 More details about the entire project can be found in:
