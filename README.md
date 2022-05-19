@@ -12,7 +12,6 @@ How to run tool:
   6. Choose a output path (geodatabase) 
   7. Run the tool. 
 
-
 Workflow of the tool:
 ![Workflow-ObstructionAngle](https://user-images.githubusercontent.com/11694862/169309052-95b8c56e-ba5b-4086-8903-5460562bfec1.jpg)
 
