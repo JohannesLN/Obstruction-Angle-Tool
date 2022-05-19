@@ -13,7 +13,6 @@ How to run tool:
   7. Run the tool. 
 
 Image of the workflow of the tool can be found in the "Workflow-ObstructionAngle.jpg" file. 
-![OA_workflow](https://user-images.githubusercontent.com/11694862/169310929-1c1ad008-e2a2-4e87-b1da-91ffc0990c80.png)
 
 More details about the entire project can be found in:
 Nyborg, J.L., 2022: Geometric Comparison of 3D City Models for Daylight Simulations. MSc thesis, Department of Physical Geography and Ecosystem Science, Lund University
