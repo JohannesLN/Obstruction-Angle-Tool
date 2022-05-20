@@ -1,7 +1,7 @@
 # Obstruction-Angle-Tool
 An ESRI ArcGIS Pro Toolbox that calculates obstruction angles of windows using 3D window data and a DSM.
 
-ESRI Toolbox verison: 10.5/10.6 Toolbox
+ESRI Toolbox verison: 10.5/10.6 Toolbox (Copyright 2022 Esri)
 
 How to run tool:
   1. Add "OA_Calculator_toolbox.tbx" to ESRI ArcGIS Pro
