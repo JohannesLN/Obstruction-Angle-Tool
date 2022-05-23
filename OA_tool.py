@@ -7,10 +7,8 @@ def OAcalc(windows, DSM, outputPath):  # OA Calc to tbx
 
     arcpy.env.overwriteOutput = True
 
-
     ### Save the coordinate system of the window data in a variable. It will be used in multiple tools later on.
     spatial_ref = arcpy.Describe(windows).spatialReference
-
 
     # Loop through each window in the input data
     wFields = ['OBJECTID', 'SHAPE@']  # The fields of the input windows that will be used
@@ -81,7 +79,6 @@ def OAcalc(windows, DSM, outputPath):  # OA Calc to tbx
                                                                       coordinate_system=spatial_ref)
             ### ----------- end of group ----------- ###
 
-
             ### Find obstruction points and calculate the obstructio angle ###
             arcpy.AddMessage("Finding the obstruction points and calculating the obstruction angle...")
             # Process: Viewshed 2 (Viewshed 2) (3d)
@@ -150,7 +147,7 @@ def OAcalc(windows, DSM, outputPath):  # OA Calc to tbx
 
             ### ----------- end of group ----------- ###
 
-            ## Search Direction (perpendicular to window) ###
+            ## Find search Direction (perpendicular to window) ###
             # Here the window vertices are used to find the direction the window is "looking"
             arcpy.AddMessage("Finding search Direction (perpendicular to window)...")
 
@@ -372,9 +369,15 @@ def OAcalc(windows, DSM, outputPath):  # OA Calc to tbx
     # Merge all the windows in the list, after all input windows have been visited.
     mergedWindowData = arcpy.management.Merge(inputs=windowOutputData, add_source="NO_SOURCE_INFO")
 
+    # Process: Delete Field (Delete Field) (management)
+    # delete unnecessary fields
+    mergedWindowData2 = arcpy.management.DeleteField(in_table=mergedWindowData,
+                                                     drop_field=["Join_Count", "pointid", "POINT_X", "POINT_Y",
+                                                                 "POINT_Z", "NEAR_ANGLE", "NEAR_FID", "NEAR_DIST"])[0]
+
     # Process: XY Table To Point (3) (XY Table To Point) (management)
     # Output point at the location of each window, for visualization and to access the table.
-    outputWindowPoints = arcpy.management.XYTableToPoint(in_table=mergedWindowData, out_feature_class=outputPath,
+    outputWindowPoints = arcpy.management.XYTableToPoint(in_table=mergedWindowData2, out_feature_class=outputPath,
                                                          x_field="cent_long_x", y_field="cent_lat_y", z_field="Z_Mean",
                                                          coordinate_system=spatial_ref)
 
