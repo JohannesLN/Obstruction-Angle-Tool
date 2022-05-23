@@ -12,8 +12,10 @@ How to run tool:
   6. Choose a output path (geodatabase) 
   7. Run the tool. 
 
-Image of the workflow of the tool can be found in the "Workflow-ObstructionAngle.jpg" file. 
+Output: A point at each midpoint of the windows. These points' attribute table includes a column (OA) with the obstruction angle values, and other columns with information: Distance (from window to obstruction), grid_code (height of obstruction), Z_Mean (height of window midpoint), coordinates, and the search direction used.
+If the tool is run with multiple windows as input data, it will merge the output to one layer. 
 
+Image of a simplified workflow of the tool can be found in the "Workflow-ObstructionAngle.jpg" file. 
 
 More details about the entire project can be found in:
 Nyborg, J.L., 2022: Geometric Comparison of 3D City Models for Daylight Simulations. MSc thesis, Department of Physical Geography and Ecosystem Science, Lund University
