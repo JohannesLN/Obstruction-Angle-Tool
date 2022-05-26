@@ -3,7 +3,7 @@ from sys import argv
 from arcpy.sa import *
 
 
-def OAcalc(windows, DSM, outputPath):  # OA Calc to tbx
+def OAcalc(windows, DSM, outputPath):
 
     arcpy.env.overwriteOutput = True
 
